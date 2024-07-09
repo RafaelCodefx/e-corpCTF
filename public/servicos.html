@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Corp Security Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/ctf/assets/th1.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centralizar conteúdo verticalmente */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 800px; /* Aumentei a largura máxima para melhorar o layout */
+            width: 80%;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra para destacar o container */
+            z-index: 1; /* Garante que o container fique sobre a imagem de fundo */
+            position: relative; /* Para garantir que o z-index funcione corretamente */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para melhorar legibilidade */
+        }
+
+        h1::after {
+            content: '_';
+            display: inline-block;
+            animation: blink-caret 0.75s infinite alternate;
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: #eee;
+            text-align: justify;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2; /* Para ficar sobreposta ao conteúdo */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease; /* Transição suave para a cor do texto */
+        }
+
+        nav a:hover {
+            color: #f0f0f0; /* Cor ao passar o mouse */
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 450px;
+        }
+
+        .product {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            margin-top:20px;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 1.2rem;
+            color: #eee;
+            line-height: 1.4;
+        }
+
+        .product a {
+            display: block;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease; /* Transição suave para cor de fundo */
+        }
+
+        .product a:hover {
+            background-color: #45a049; /* Cor ao passar o mouse */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            color: #ccc;
+            z-index: 2; /* Para ficar sobreposta ao conteúdo */
+            align-items: center;
+            margin-left:80%;
+            margin-right:20%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/ctf/">Início</a>
+        <a href="/ctf/about">Sobre</a>
+        <a href="/ctf/servicos">Serviços</a>
+        <a href="/ctf/contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <h1>E-Corp Security Hub</h1>
+        <p>Explore a E-Corp Security Hub, inspirada pelo universo de Mr. Robot, onde desafiamos entusiastas de segurança cibernética com nossos desafios de Capture The Flag (CTF). Desde iniciantes até especialistas, oferecemos um ambiente educativo e seguro para aprender e testar habilidades de hacking ético. Nosso objetivo é capacitar uma comunidade dedicada à ética e inovação na segurança digital. Junte-se a nós para explorar, aprender e fazer parte da revolução cibernética.</p>
+
+        <div class="products">
+            <div class="product">
+                <img src="/ctf/assets/quantum.jpeg" alt="Computador Quantum">
+                <h3>Computador Quantum</h3>
+                <p>Desenvolvido pela E-Corp, o Computador Quantum é equipado com inteligência artificial avançada e segurança de última geração.</p>
+                <a href="/ctf/servicos/buy">Saiba Mais</a>
+            </div>
+            <div class="product">
+                <img src="/ctf/assets/software.jpeg" alt="Software de Segurança X-Protect">
+                <h3>Software de Segurança X-Protect</h3>
+                <p>Proteja seus dados com o X-Protect, o software de segurança mais avançado da E-Corp, capaz de detectar e neutralizar ameaças em tempo real.</p>
+                <a href="/ctf/servicos/buy">Saiba Mais</a>
+            </div>
+            <div class="product">
+                <img src="/ctf/assets/curso.jpeg" alt="Curso Avançado de Hacking Ético">
+                <h3>Curso Avançado de Hacking Ético</h3>
+                <p>Aprenda com os melhores especialistas da E-Corp em um curso avançado de hacking ético, preparando você para desafios no mundo real.</p>
+                <a href="/ctf/servicos/buy">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 E-Corp Security Hub. Este website não é real! Não forneça credenciais sensíveis.</p>
+    </footer>
+</body>
+</html>

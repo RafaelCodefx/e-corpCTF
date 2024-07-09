@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Corp</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/ctf/assets/th1.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centralizar conteúdo verticalmente */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Evitar rolagem no fundo */
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 80%;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra para destacar o container */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para melhorar legibilidade */
+        }
+
+        h1::after {
+            content: '_';
+            display: inline-block;
+            animation: blink-caret 0.75s infinite alternate;
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-size: 1.0rem;
+            line-height: 1.6;
+            color: #eee;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease; /* Transição suave para a cor do texto */
+        }
+
+        nav a:hover {
+            color: #f0f0f0; /* Cor ao passar o mouse */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #ccc;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.8rem;
+        }
+        #buton{
+            margin-top:20px;
+            background-color:grey;
+            width: 15%;
+            margin-left:20px;
+            height: auto;
+            font-size: 10pt;
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/ctf/">Início</a>
+        <a href="/ctf/about">Sobre</a>
+        <a href="/ctf/servicos">Serviços</a>
+        <a href="/ctf/contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <h1>Acesso admin</h1>
+        <form>
+            <input type="text" placeholder="login" id="login">
+            <input type="text" placeholder="senha" id="senha">
+            <button id="buton">Entrar</button>
+        </form>
+        <p id="alert"></p>
+    </div>
+
+    <script>
+        document.getElementById('buton').addEventListener('click', () => {
+            const login = document.getElementById('login').value
+            const senha = document.getElementById('senha').value
+
+            if(login === 'ECorpMaster' && senha === 'Futuro@2024'){
+                event.preventDefault()
+                window.location.href = '/ctf/admin/access'
+            }
+            if(login === "'or 'x'='x" && senha === "'or 'x'='x"){
+                event.preventDefault()
+                window.location.href = '/ctf/admin/access'
+            }
+            else{
+                event.preventDefault()
+                document.getElementById('alert').innerText = 'login e senha incorretos!'
+            }
+        })
+    </script>
+
+    <footer>
+        <p>&copy; 2024 E-Corp. Não coloque dados confidenciais, o website não é real.</p>
+    </footer>
+</body>
+</html>

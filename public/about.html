@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Corp</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/ctf/assets/th1.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centralizar conteúdo verticalmente */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Evitar rolagem no fundo */
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 80%;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra para destacar o container */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para melhorar legibilidade */
+        }
+
+        h1::after {
+            content: '_';
+            display: inline-block;
+            animation: blink-caret 0.75s infinite alternate;
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: #eee;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease; /* Transição suave para a cor do texto */
+        }
+
+        nav a:hover {
+            color: #f0f0f0; /* Cor ao passar o mouse */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #ccc;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.8rem;
+        }
+        #sobre{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/ctf/">Início</a>
+        <a href="/ctf/about">Sobre</a>
+        <a href="/ctf/servicos">Serviços</a>
+        <a href="/ctf/contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <h1>Sobre nós</h1>
+        <p id="sobre">Explore a E-Corp Security Hub, inspirada pelo universo de Mr. Robot, onde desafiamos entusiastas de segurança cibernética com nossos desafios de Capture The Flag (CTF). Desde iniciantes até especialistas, oferecemos um ambiente educativo e seguro para aprender e testar habilidades de hacking ético. Nosso objetivo é capacitar uma comunidade dedicada à ética e inovação na segurança digital. Junte-se a nós para explorar, aprender e fazer parte da revolução cibernética.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 E-Corp. Este website não é Real! Não forneça credenciais!.</p>
+    </footer>
+</body>
+</html>
